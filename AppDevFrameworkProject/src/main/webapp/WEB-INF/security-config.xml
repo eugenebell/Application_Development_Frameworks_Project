@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/util 
+                           http://www.springframework.org/schema/util/spring-util-3.0.xsd
+                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<security:http access-denied-page="/movies/denied.htm">
+		<security:form-login login-page="/movies/login.htm" authentication-failure-url="/movies/login.htm?login_error=true" />
+		<security:intercept-url pattern="/movies/denied.htm" filters="none"/>
+		<security:intercept-url pattern="/movies/login.htm*" filters="none"/>
+		<security:intercept-url pattern="/movies/movieListing/**" access="ROLE_ADMIN, ROLE_USER" />
+		<security:intercept-url pattern="/movies/createVideoStoremember*" access="ROLE_ADMIN" />
+		<security:intercept-url pattern="/movies/**" access="IS_AUTHENTICATED_FULLY" />
+		<security:logout/>
+	</security:http>
+ <security:authentication-manager>
+	<security:authentication-provider>
+<!--		<security:password-encoder hash="md5" >
+			<security:salt-source system-wide="MySalt"/> 
+		</security:password-encoder>-->
+		<security:jdbc-user-service data-source-ref="dataSource"/>
+	</security:authentication-provider>
+</security:authentication-manager>
+	<security:global-method-security secured-annotations="enabled">
+		<security:protect-pointcut expression="execution(* com.cit.eugene..*ManagerImpl.*(..))" access="ROLE_USER,ROLE_ADMIN" />
+	</security:global-method-security>
+
+<!--  <bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="mySalt">
+		<property name="userPropertyToUse" value="username"/>
+	</bean>-->	
+</beans>
