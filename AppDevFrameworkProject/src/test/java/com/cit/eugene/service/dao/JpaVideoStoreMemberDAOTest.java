@@ -49,7 +49,7 @@ public class JpaVideoStoreMemberDAOTest {
 	public void testGetAllVideoStoreMembers() {
 		List<VideoStoreMember> l = jpaVideoStoreMember.getAllVideoStoreMembers();
 		assertNotNull(l);
-		assertEquals(2, l.size());
+		assertEquals(1, l.size());
 	}
 
 	@Test

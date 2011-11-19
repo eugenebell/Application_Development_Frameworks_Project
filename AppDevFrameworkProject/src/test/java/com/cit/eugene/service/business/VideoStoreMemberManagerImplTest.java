@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,6 +38,7 @@ public class VideoStoreMemberManagerImplTest {
 		movieDAORepository = createMock(MovieDAO.class);
 		movieReservationRepository = createMock(MovieReservationDAO.class);
 		movieManagerImpl = new VideoStoreMemberManagerImpl();
+		movieManagerImpl.init();
 		movieManagerImpl.setMovieRepository(movieDAORepository);	
 		movieManagerImpl.setVideoStoreMemberRepository(videoStoreMemberRepository);
 		movieManagerImpl.setMovieReservationRepository(movieReservationRepository);
@@ -65,7 +67,12 @@ public class VideoStoreMemberManagerImplTest {
 		vsm.setMovieReservations(l);
 		vsm.setVideoStoreMemberID(2l);
 	}
-
+	
+	@After
+	public void tearDown() {
+		movieManagerImpl.destroy();
+	}
+	
 	@Test
 	public void testSetVideoStoreMemberRepository() {
 		assertNotNull(videoStoreMemberRepository);

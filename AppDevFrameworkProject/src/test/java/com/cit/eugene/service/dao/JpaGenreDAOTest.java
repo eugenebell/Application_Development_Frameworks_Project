@@ -29,7 +29,7 @@ public class JpaGenreDAOTest {
 		Genre g = l.get(1);
 		assertEquals(2, g.getGenreID().longValue());
 		assertEquals("Adventure", g.getGenreName());
-		assertEquals(5, g.getMovies().size());
+		assertEquals(11, g.getMovies().size());
 		assertNotNull(g.getMovies());
 	}
 }

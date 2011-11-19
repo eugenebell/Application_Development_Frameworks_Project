@@ -8,6 +8,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,7 +24,13 @@ public class GenreManagerImplTest {
 	public void setUp() throws Exception {
 		genreRepository = createMock(GenreDAO.class);
 		genreManagerImpl = new GenreManagerImpl();
+		genreManagerImpl.init();
 		genreManagerImpl.setGenreRepository(genreRepository);
+	}
+	
+	@After
+	public void tearDown() {
+		genreManagerImpl.destroy();
 	}
 
 	@Test

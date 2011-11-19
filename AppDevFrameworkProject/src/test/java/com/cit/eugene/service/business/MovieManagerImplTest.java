@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,6 +34,7 @@ public class MovieManagerImplTest {
 		movieDAORepository = createMock(MovieDAO.class);
 		movieManagerImpl = new MovieManagerImpl();
 		videoStoreMemberRepository = createMock(VideoStoreMemberDAO.class);
+		movieManagerImpl.init();
 		movieManagerImpl.setMovieRepository(movieDAORepository);	
 		movieManagerImpl.setVideoStoreMemberDAO(videoStoreMemberRepository);
 		m.setMovieID(1l);
@@ -57,6 +59,11 @@ public class MovieManagerImplTest {
 		l.add(mr);
 		vsm.setMovieReservations(l);
 		vsm.setVideoStoreMemberID(2l);
+	}
+	
+	@After
+	public void tearDown() {
+		movieManagerImpl.destroy();
 	}
 
 	@Test

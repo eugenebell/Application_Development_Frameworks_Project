@@ -36,13 +36,13 @@ public class JpaMovieDAOTest {
 	@Test
 	public void testGetMovieListingByGenreID() {
 		List<Movie> l1  = jpaMovieDAO.getMovieListingByGenreID(2l);
-		assertEquals(5, l1.size());
+		assertEquals(11, l1.size());
 		List<Movie> l2  = jpaMovieDAO.getMovieListingByGenreID(5l);
-		assertEquals(2, l2.size());
+		assertEquals(5, l2.size());
 		List<Movie> l3  = jpaMovieDAO.getMovieListingByGenreID(6l);
-		assertEquals(3, l3.size());
+		assertEquals(15, l3.size());
 		List<Movie> l4  = jpaMovieDAO.getMovieListingByGenreID(9l);
-		assertEquals(5, l4.size());
+		assertEquals(3, l4.size());
 	}
 
 	@Test
@@ -60,7 +60,7 @@ public class JpaMovieDAOTest {
 		assertEquals(false, m.isRented());
 		assertEquals("3.99", m.getPrice().toString());
 		assertEquals(2, m.getRating().intValue());
-		assertEquals(6, m.getGenres().size());
+		assertEquals(3, m.getGenres().size());
 	}
 
 }
