@@ -21,7 +21,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
  * @author ebell
  */
 @Entity
-@Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = { "username" }))
+@Table(name = "USERS", uniqueConstraints = @UniqueConstraint(columnNames = { "USERNAME" }))
 public class User {
 
 	@Id

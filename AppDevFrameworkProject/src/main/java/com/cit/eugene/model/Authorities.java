@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
  * @author ebell
  */
 @Entity
-@Table(name = "authorities")
+@Table(name = "AUTHORITIES")
 public class Authorities {
 
 	@Id

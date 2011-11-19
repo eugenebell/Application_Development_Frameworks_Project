@@ -137,18 +137,13 @@ insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (24,11);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (25,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (25,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (25,10);
-
+insert into USERS (USERNAME, PASSWORD, ENABLED) values ('admin','admin', true);
+insert into AUTHORITIES (AUTHORITIESID, USERNAME, AUTHORITY) values (1, 'admin','ROLE_USER');
+insert into AUTHORITIES (AUTHORITIESID, USERNAME, AUTHORITY) values (2, 'admin','ROLE_ADMIN');
+insert into USERS (USERNAME, PASSWORD, ENABLED) values ('keri','keri', true);
+insert into AUTHORITIES (AUTHORITIESID, USERNAME, AUTHORITY) values (3, 'keri','ROLE_USER');
+insert into USERS (USERNAME, PASSWORD, ENABLED) values ('aaa','aaa', true);
+insert into AUTHORITIES (AUTHORITIESID, USERNAME, AUTHORITY) values (4, 'aaa','ROLE_USER');
 insert into ACCOUNT (ACCOUNT_ID, TOTAL) values (1, 0);
-insert into ACCOUNT (ACCOUNT_ID, TOTAL) values (2, 0);
 insert into VIDEO_STORE_MEMBER (VIDEO_STORE_MEMBER_ID, USERNAME, MEMBER_NAME, LOCATION, MEMBERSHIP_NUMBER, ACCOUNT_ID) values (1, 'keri', 'keri', 'Cork', 122345456, 1);
-insert into VIDEO_STORE_MEMBER (VIDEO_STORE_MEMBER_ID, USERNAME, MEMBER_NAME, LOCATION, MEMBERSHIP_NUMBER, ACCOUNT_ID) values (2, 'aaa', 'aaa', 'Kerry', 122345457, 2);
-
-
-insert into users(USERNAME, PASSWORD, ENABLED) values ('admin','admin', true);
-insert into authorities(AUTHORITIESID, USERNAME, AUTHORITY) values (1, 'admin','ROLE_USER');
-insert into authorities(AUTHORITIESID, USERNAME, AUTHORITY) values (2, 'admin','ROLE_ADMIN');
-insert into users(USERNAME, PASSWORD, ENABLED) values ('keri','keri', true);
-insert into authorities(AUTHORITIESID, USERNAME, AUTHORITY) values (3, 'keri','ROLE_USER');
-insert into users(USERNAME, PASSWORD, ENABLED) values ('aaa','aaa', true);
-insert into authorities(AUTHORITIESID, USERNAME, AUTHORITY) values (4, 'aaa','ROLE_USER');
 
