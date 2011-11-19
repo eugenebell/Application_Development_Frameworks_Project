@@ -65,7 +65,7 @@ public class Movie {
 
 	@ManyToMany
 	@OrderBy("genreName")
-	@JoinTable(name = "MOVIE_GENRE_LINK", joinColumns = { @JoinColumn(name = "GENRE_ID") }, inverseJoinColumns = { @JoinColumn(name = "MOVIE_ID") })
+	@JoinTable(name = "MOVIE_GENRE_LINK", joinColumns = { @JoinColumn(name = "MOVIE_ID") }, inverseJoinColumns = { @JoinColumn(name = "GENRE_ID") })
 	private Set<Genre> genres = new HashSet<Genre>();
 
 	public Long getMovieID() {

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -15,8 +13,8 @@
 	<!-- Imports application Security -->
 	<import resource="security-config.xml" />
 
-	<context:annotation-config/>
-	
+	<context:annotation-config />
+
 	<!-- FactoryBean that creates the EntityManagerFactory -->
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="jpaVendorAdapter">
@@ -29,18 +27,23 @@
 		<property name="persistenceUnitName" value="video-unit" />
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-    
+
 	<!-- A transaction manager for working with JPA EntityManagerFactories -->
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
-	
-	<context:property-placeholder location="/WEB-INF/datasource.properties"/>
-	
+
+	<context:property-placeholder location="/WEB-INF/datasource.properties" />
+
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	    <property name="driverClassName" value="${datasource.driverClassName}" />
-	    <property name="url" value="${datasource.url}" />
-	    <property name="username" value="${datasource.username}" />
-	    <property name="password" value="${datasource.password}" />
+		<property name="driverClassName" value="${datasource.driverClassName}" />
+		<property name="url" value="${datasource.url}" />
+		<property name="username" value="${datasource.username}" />
+		<property name="password" value="${datasource.password}" />
 	</bean>
+
+	<jdbc:initialize-database data-source="dataSource">
+		<jdbc:script location="classpath:com/cit/eugene/testdb/schema.sql" />
+		<jdbc:script location="classpath:com/cit/eugene/testdb/sample-setup-data.sql" />
+	</jdbc:initialize-database>
 </beans>

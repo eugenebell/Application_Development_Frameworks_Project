@@ -35,7 +35,7 @@ values (11, 'Centurion', 5.99, 4, 2010, 'Centurion.jpg', '97 min', 'Britain, A.D
 insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
 values (12, 'Clash of the Titans', 3.99, 3, 2010, 'Clash_of_the_Titans.jpg', '106 min', 'The mortal son of the god Zeus embarks on a perilous journey to stop the underworld and its minions from spreading their evil to Earth as well as the heavens.', 'Sam Worthington, Liam Neeson, Ralph Fiennes', 'Louis Leterrier', '', '');
 insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
-values (13, 'Despicable Me', 2.99, 2, 2010, 'Despicable_Me.jpg', '95 min', 'In a happy suburban neighborhood surrounded by white picket fences with flowering rose bushes, sits a black house with a dead lawn. Unbeknownst to the neighbors, hidden beneath this home is a vast secret hideout. Surrounded by a small army of minions, we discover Gru, planning the biggest heist in the history of the world. He is going to steal the moon. (Yes, the moon!) Gru delights in all things wicked. Armed with his arsenal of shrink rays, freeze rays, and battle-ready vehicles for land and air, he vanquishes all who stand in his way. Until the day he encounters the immense will of three little orphaned girls who look at him and see something that no one else has ever seen: a potential Dad. The world''s greatest villain has just met his greatest challenge: three little girls named Margo, Edith and Agnes.', 'Steve Carell, Jason Segel, Russell Brand', 'Russell Brand', '', '');
+values (13, 'Despicable Me', 2.99, 2, 2010, 'Despicable_Me.jpg', '95 min', 'In a happy suburban neighborhood surrounded by white picket fences with flowering rose bushes, sits a black house with a dead lawn. Unbeknownst to the neighbors, hidden beneath this home is a vast secret hideout. Surrounded by a small army of minions, we discover Gru, planning the biggest heist in the history of the world. He is going to steal the moon. (Yes, the moon) Gru delights in all things wicked. Armed with his arsenal of shrink rays, freeze rays, and battle-ready vehicles for land and air, he vanquishes all who stand in his way. Until the day he encounters the immense will of three little orphaned girls who look at him and see something that no one else has ever seen: a potential Dad. The world''s greatest villain has just met his greatest challenge: three little girls named Margo, Edith and Agnes.', 'Steve Carell, Jason Segel, Russell Brand', 'Russell Brand', '', '');
 insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
 values (14, 'Due Date', 3.99, 2, 2011, 'Due_Date.jpg', '95 min', 'Peter Highman (Robert Downey Jr.) must get to LA in five days to be at the birth of his firstborn. He is about to fly home from Atlanta when his luggage and wallet are sent to LA without him, and he is put on the "no-fly" list. Desperate to get home Peter is forced to accept the offer of Ethan Tremblay (Zach Galifianakis) to hitch a ride with him cross-country. Peter is about to go on the most terrifying and agonizing journey of his life.', 'Robert Downey Jr., Zach Galifianakis, Michelle Monaghan', 'Todd Phillips', '', '');
 insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
@@ -60,10 +60,42 @@ insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLA
 values (24, 'Inglourious Basterds', 4.99, 5, 2009, 'Inglourious_Basterds.jpg', '153 min', 'In Nazi occupied France, young Jewish refugee Shosanna Dreyfus witnesses the slaughter of her family by Colonel Hans Landa. Narrowly escaping with her life, she plots her revenge several years later when German war hero Fredrick Zoller takes a rapid interest in her and arranges an illustrious movie premiere at the theater she now runs. With the promise of every major Nazi officer in attendance, the event catches the attention of the "Basterds", a group of Jewish-American guerilla soldiers led by the ruthless Lt. Aldo Raine. As the relentless executioners advance and the conspiring young girl''s plans are set in motion, their paths will cross for a fateful evening that will shake the very annals of history.', 'Brad Pitt, Diane Kruger, Eli Roth', 'Quentin Tarantino', '', '');
 insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
 values (25, 'Iron Man', 3.99, 2, 2008, 'Iron_Man.jpg', '126 min', 'Tony Stark is the complete playboy who also happens to be an engineering genius. While in Afghanistan demonstrating a new missile, he''s captured and wounded. His captors want him to assemble a missile for them but instead he creates an armored suit and a means to prevent his death from the shrapnel left in his chest by the attack. He uses the armored suit to escape. Back in the U.S. he announces his company will cease making weapons and he begins work on an updated armored suit only to find that Obadiah Stane, his second in command at Stark industries has been selling Stark weapons to the insurgents. He uses his new suit to return to Afghanistan to destroy the arms and then to stop Stane from misusing his research.', 'Robert Downey Jr., Gwyneth Paltrow, Terrence Howard', 'Jon Favreau', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (26, 'Just Go with It', 3.49, 1, 2011, 'Just_Go_with_It.jpg', '117 min', 'Danny (Adam Sandler) must engage Katherine (Jennifer Aniston), his faithful assistant, to pretend to be his soon to be ex-wife. Danny must pretend that he is married, because he lied to his dream girl, Palmer (Brooklyn Decker) the most gorgeous woman in the world. To keep the woman he loves, covering up one lie soon turns into many lies', 'Adam Sandler, Jennifer Aniston, Brooklyn Decker', 'Dennis Dugan', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (27, 'London Boulevard', 4.54, 2, 2010, 'London_Boulevard.jpg', '110 min', 'Mitchel (Colin Farrell) just got out of jail and wants to stay legitimate but his friends involved in the messy London underground fear him and wants him to join them again but Mitchel tries his best to stay away. He gets himself a job as a bodyguard for a retired actress Charlotte (Keira Knightley) who is still hot news for the paparazzi. Mitchell, through his friend Billy eventually meets the underground Don by the name of Gant (Ray Winstone) who wants Mitch to work for him because of Mitch''s reputations. While working together Mitch and Charlotte fall in love. Gant asks Billy to get the guy who sent Mitch to jail but it turns out to be the wrong one, Gant kills the guy in front of Mitch and lets Mitch know that he has to work for him now that Mitch has seen him commit the murder but Mitch refuses. Gant keeps trying to force Mitch to his side promising him good ranks and positions... ', 'Colin Farrell, Keira Knightley, Ray Winstone', 'William Monahan', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (28, 'Monsters', 2.99, 2, 2010, 'Monsters.jpg', '94 min', 'Six years ago NASA discovered the possibility of alien life within our solar system. A probe was launched to collect samples, but crashed upon re-entry over Central America. Soon after, new life form began to appear and half of Mexico was quarantined as an INFECTED ZONE. Today, the American and Mexican military still struggle to contain "the creatures"...... Our story begins when a US journalist agrees to escort a shaken tourist through the infected zone in Mexico to the safety of the US border.', 'Scoot McNairy, Whitney Able', 'Gareth Edwards', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (29, 'Morning Glory', 4.99, 2, 2010, 'Morning_Glory.jpg', '107 min', 'Becky (Rachel McAdams) is a hard-working morning TV show producer, or at least she was until she got fired. Desperate to get a job, she finally gets an interview with Jerry (Jeff Goldblum) - who is desperate to hire a producer for the struggling show "Daybreak". Becky accepts the job and it proves to be more difficult than even she might be able to handle. She has to fire the sexist co-host, then try to convince egotistical news reporter, Mike Pomeroy (Harrison Ford), to take the job, and then try and get him to actually do the job, properly. And she has to do this while falling for handsome Adam (Patrick Wilson), and trying to save the show from plummeting ratings. Will Becky be able to hold on to her dream job and her sanity?', 'Rachel McAdams, Harrison Ford, Diane Keaton', 'Roger Michell', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (30, 'Never Let Me Go', 1.99, 2, 2010, 'Never_Let_Me_Go.jpg', '103 min', 'As children, Ruth, Kathy and Tommy, spend their childhood at a seemingly idyllic English boarding school. As they grow into young adults, they find that they have to come to terms with the strength of the love they feel for each other, while preparing themselves for the haunting reality that awaits them.', 'Keira Knightley, Carey Mulligan, Andrew Garfield', 'Mark Romanek', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (31, 'Predators', 3.29, 2, 2010, 'Predators.jpg', '107 min', 'Chosen for their ability to kill without conscience, a group of killers, some trained and some who are not, must endeavour the alien race of predators that have set out to target them as prey. Dropped into the vast jungle of a distant world, these human predators must learn just who, or what, they are up against, and that their ability, knowledge and wits are tested to the limits in the battle of survival of kill or be killed.', 'Adrien Brody, Laurence Fishburne, Topher Grace', 'Nimrod Antal', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (32, 'Priest', 2.99, 2, 2011, 'Priest.jpg', '87 min', 'PRIEST, a post-apocalyptic sci-fi thriller, is set in an alternate world -- one ravaged by centuries of war between man and vampires. The story revolves around a legendary Warrior Priest from the last Vampire War who now lives in obscurity among the other downtrodden human inhabitants in walled-in dystopian cities ruled by the Church. When his niece is abducted by a murderous pack of vampires, Priest breaks his sacred vows to venture out on a quest to find her before they turn her into one of them. He is joined on his crusade by his niece''s boyfriend, a trigger-fingered young wasteland sheriff, and a former Warrior Priestess who possesses otherworldly fighting skills.', 'Paul Bettany, Cam Gigandet, Maggie Q', 'Scott Charles Stewart', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (33, 'Red Riding Hood', 3.29, 2, 2011, 'Red_Riding_Hood.jpg', '100 min', 'Valerie (Seyfried) is a beautiful young woman torn between two men. She is in love with a brooding outsider, Peter (Fernandez), but her parents have arranged for her to marry the wealthy Henry (Irons). Unwilling to lose each other, Valerie and Peter are planning to run away together when they learn that Valerie''s older sister has been killed by the werewolf that prowls the dark forest surrounding their village. For years, the people have maintained an uneasy truce with the beast, offering the creature a monthly animal sacrifice. But under a blood red moon, the wolf has upped the stakes by taking a human life. Hungry for revenge, the people call on famed werewolf hunter, Father Solomon (Oldman), to help them kill the wolf. But Solomon''s arrival brings unintended consequences as he warns that the wolf, who takes human form by day, could be any one of them. As the death toll rises with each moon...', 'Amanda Seyfried, Lukas Haas, Gary Oldman', 'Catherine Hardwicke', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (34, 'Rio', 3.99, 2, 2011, 'Rio.jpg', '96 min', 'When Blu, a domesticated macaw from small-town Minnesota, meets the fiercely independent Jewel, he takes off on an adventure to Rio de Janeiro with this bird of his dreams.', 'Jesse Eisenberg, Anne Hathaway, George Lopez', 'Carlos Saldanha', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (35, 'Robin Hood', 1.99, 2, 2010, 'Robin_Hood.jpg', '140 min', 'Birth of a legend. Following King Richard''s death in France, archer Robin Longstride, along with Will Scarlett, Alan-a-Dale and Little John, returns to England. They encounter the dying Robert of Locksley, whose party was ambushed by treacherous Godfrey, who hopes to facilitate a French invasion of England. Robin promises the dying knight he will return his sword to his father Walter in Nottingham. Here Walter encourages him to impersonate the dead man to prevent his land being confiscated by the crown, and he finds himself with Marian, a ready-made wife. Hoping to stir baronial opposition to weak King John and allow an easy French take-over, Godfrey worms his way into the king''s service as Earl Marshal of England and brutally invades towns under the pretext of collecting Royal taxes. Can Robin navigate the politics of barons, royals, traitors, and the French?', 'Russell Crowe, Cate Blanchett, Matthew Macfadyen', 'Ridley Scott', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (36, 'Source Code', 3.99, 2, 2011, 'Source_Code.jpg', '93 min', 'Colter Stevens, an American Army helicopter pilot whose last memory is flying in Afghanistan, wakes up on a commuter train. However, he discovers that he has assumed the identity of another man. 8 minutes later, the train explodes and Stevens finds himself in some kind of pod. He then talks to someone named Goodwin, who tells him he has to go back and find out who the bomber is. He is sent back to go through the whole thing again and attempts to find who the bomber is but fails. The bomb goes off and Stevens finds himself in the pod again. He is sent back another time, yet still cannot find out anything. When he returns, he asks what is going on. Goodwin and Rutledge, the scientist in charge, tell him that he is part of a project that can put someone in another person''s consciousness during the last 8 minutes of their life. Stevens then asks why he cannot just stop the bomb.', 'Jake Gyllenhaal, Michelle Monaghan, Vera Farmiga', 'Duncan Jones', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (37, 'Star Trek', 3.99, 2, 2009, 'Star_Trek.jpg', '120 min', 'On the day of James Kirk''s birth, his father dies on his ship in a last stand against a mysterious alien vessel. He was looking for Ambassador Spock, who is a child on Vulcan at that time, disdained by his neighbors for his half-human nature. Twenty years later, Kirk has grown into a young troublemaker inspired by Capt. Christopher Pike to fulfill his potential in Starfleet even as he annoys his instructors like young Cmdr. Spock. Suddenly, there is an emergency at Vulcan and the newly commissioned USS Enterprise is crewed with promising cadets like Nyota Uhura, Hikaru Sulu, Pavel Chekov and even Kirk himself thanks to Leonard McCoy''s medical trickery. Together, this crew will have an adventure in the final frontier where the old legend is altered forever even as the new version of it is just beginning.', 'Chris Pine, Zachary Quinto, Simon Pegg', 'J.J. Abrams', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (38, 'The Adjustment Bureau', 3.99, 2, 2011, 'The_Adjustment_Bureau.jpg', '106 min', 'Do we control our destiny, or do unseen forces manipulate us? A man glimpses the future Fate has planned for him and realizes he wants something else. To get it, he must pursue across, under and through the streets of modern-day New York the only woman he''s ever loved. On the brink of winning a seat in the U.S. Senate, ambitious politician David Norris (Damon) meets beautiful contemporary ballet dancer Elise Sellas (Emily Blunt) - a woman like none he''s ever known. But just as he realizes he''s falling for her, mysterious men conspire to keep the two apart. David learns he is up against the agents of Fate itself - the men of The Adjustment Bureau - who will do everything in their considerable power to prevent David and Elise from being together. In the face of overwhelming odds, he must either let her go and accept a predetermined path...or risk everything to defy Fate and be with her.', 'Matt Damon, Emily Blunt, Florence Kastriner', 'George Nolfi', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (39, 'The American', 5.99, 2, 2010, 'The_American.jpg', '105 min', 'Alone among assassins, Jack is a master craftsman. When a job in Sweden ends more harshly than expected for this American abroad, he vows to his contact Pavel that his next assignment will be his last. Jack reports to the Italian countryside, where he holes up in a small town and relishes being away from death for a spell. The assignment, as specified by a Belgian woman, Mathilde, is in the offing as a weapon is constructed. Surprising himself, Jack seeks out the friendship of local priest Father Benedetto and pursues romance with local woman Clara. But by stepping out of the shadows, Jack may be tempting fate.', 'George Clooney, Paolo Bonacelli, Violante Placido', 'Anton Corbijn', '', '');
+insert into MOVIE (MOVIE_ID, TITLE, PRICE, RATING, YEAR, POSTER_FILENAME, DISPLAY_RUNTIME, SUMMARY, ACTORS_DISPLAY, DIRECTORS_DISPLAY, PRODUCERS_DISPLAY, STUDIO_DISPLAY)
+values (40, 'Transformers: Revenge of the Fallen', 4.99, 2, 2009, 'Transformers__Revenge_of_the_Fallen.jpg', '150 min', 'A youth chooses manhood. The week Sam Witwicky starts college, the Decepticons make trouble in Shanghai. A presidential envoy believes it''s because the Autobots are around; he wants them gone. He''s wrong: the Decepticons need access to Sam''s mind to see some glyphs imprinted there that will lead them to a fragile object that, when inserted in an alien machine hidden in Egypt for centuries, will give them the power to blow out the sun. Sam, his girlfriend Mikaela, and Sam''s parents are in danger. Optimus Prime and Bumblebee are Sam''s principal protectors. If one of them goes down, what becomes of Sam?', 'Shia LaBeouf, Megan Fox, Josh Duhamel', 'Michael Bay', '', '');
+
 
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (1,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (1,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (1,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (1,6);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (2,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (2,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (2,6);
@@ -76,14 +108,14 @@ insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (4,4);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (4,5);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (5,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (5,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (6,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (6,6);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (6,7);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (6,8);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (7,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (7,6);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (7,9);
-insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (7,12);
-insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (7,11);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (7,10);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (8,6);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (9,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (9,3);
@@ -98,7 +130,7 @@ insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (11,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (11,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (11,6);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (11,9);
-insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (11,11);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (11,10);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (12,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (12,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (12,10);
@@ -137,6 +169,60 @@ insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (24,11);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (25,1);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (25,2);
 insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (25,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (26,1);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (26,4);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (26,8);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (26,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (27,2);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (27,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (27,9);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (28,1);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (28,3);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (28,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (29,5);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (29,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (29,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (30,2);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (30,7);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (30,8);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (31,2);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (31,3);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (31,5);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (31,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (31,9);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (31,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (32,1);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (32,7);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (32,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (33,3);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (33,7);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (33,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (33,1);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (34,5);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (34,7);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (35,2);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (35,4);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (35,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (35,7);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (36,3);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (36,5);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (36,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (36,7);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (36,10);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (37,2);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (37,4);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (37,8);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (38,1);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (38,5);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (38,9);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (39,2);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (39,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (39,11);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (40,3);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (40,6);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (40,8);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (40,9);
+insert into MOVIE_GENRE_LINK (MOVIE_ID, GENRE_ID) values (40,11);
 
 insert into ACCOUNT (ACCOUNT_ID, TOTAL) values (1, 0);
 insert into VIDEO_STORE_MEMBER (VIDEO_STORE_MEMBER_ID, USERNAME, MEMBER_NAME, LOCATION, MEMBERSHIP_NUMBER, ACCOUNT_ID) values (1, 'keri', 'keri', 'Cork', 122345456, 1);

@@ -31,7 +31,7 @@ public class Genre {
 	private String genreName;
 
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "MOVIE_GENRE_LINK", joinColumns = { @JoinColumn(name = "MOVIE_ID") }, inverseJoinColumns = { @JoinColumn(name = "GENRE_ID") })
+	@JoinTable(name = "MOVIE_GENRE_LINK", joinColumns = { @JoinColumn(name = "GENRE_ID") }, inverseJoinColumns = { @JoinColumn(name = "MOVIE_ID") })
 	private Set<Movie> movies = new HashSet<Movie>();
 
 	// To stop JSON going nuts on recursion

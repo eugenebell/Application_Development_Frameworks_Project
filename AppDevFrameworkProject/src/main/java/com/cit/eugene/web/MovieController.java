@@ -36,14 +36,12 @@ public class MovieController {
 	}
 
 	@RequestMapping(value = "/movieListing/genre/{genreid}", method = RequestMethod.GET)
-	public @ResponseBody
-	List<Movie> getMovieListByGenre(@PathVariable("genreid") Long id) {
+	public @ResponseBody List<Movie> getMovieListByGenre(@PathVariable("genreid") Long id) {
 		return movieManager.getMovieListingByGenreID(id);
 	}
 
 	@RequestMapping(value = "/movieListing/movie/{movieid}", method = RequestMethod.GET)
-	public @ResponseBody
-	Movie getMovieInfoByID(@PathVariable("movieid") Long id) {
+	public @ResponseBody Movie getMovieInfoByID(@PathVariable("movieid") Long id) {
 		Authentication aut = SecurityContextHolder.getContext().getAuthentication();
 		return movieManager.getMovieByID(aut.getName(), id);
 	}

@@ -1,5 +1,7 @@
 package com.cit.eugene.service.dao;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,6 +10,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
+import com.cit.eugene.model.Genre;
 import com.cit.eugene.model.Movie;
 
 @Repository
@@ -17,7 +20,8 @@ public class JpaMovieDAO implements MovieDAO {
 
 	private static final String loadAllMovies = "from Movie";
 	private static final String loadMoviebyID = "from Movie m where m.movieID = :movieID";
-	private static final String loadMoviesByGenreID = "select m from Movie m join m.genres g where g.genreID = :genreID";
+//	private static final String loadMoviesByGenreID = "select m from Movie m join m.genres g where g.genreID = :genreID";
+	private static final String loadMoviesByGenreID = "from Genre g where g.genreID = :genreID";
 
 	@PersistenceContext
 	public void setEntityManager(EntityManager entityManager) {
@@ -31,8 +35,8 @@ public class JpaMovieDAO implements MovieDAO {
 	}
 
 	public List<Movie> getMovieListingByGenreID(Long genreID) {
-		List<Movie> l = entityManager.createQuery(loadMoviesByGenreID).setParameter("genreID", genreID).getResultList();
-		return l;
+		Genre g = (Genre) entityManager.createQuery(loadMoviesByGenreID).setParameter("genreID", genreID).getSingleResult();
+		return new ArrayList<Movie>(g.getMovies());
 	}
 
 	public Movie getMovieByID(Long movieID) {

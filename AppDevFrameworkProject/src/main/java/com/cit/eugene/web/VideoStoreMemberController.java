@@ -37,19 +37,18 @@ public class VideoStoreMemberController {
 
 	@RequestMapping(value = "/movieListing/listAllVideoStoreMember", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	public @ResponseBody
-	List<VideoStoreMember> getAllVideoStoreMember() {
+	public @ResponseBody List<VideoStoreMember> getAllVideoStoreMember() {
 		return videoStoreMemberManager.getAllVideoStoreMember();
 	}
 
 	@RequestMapping(value = "/movieListing/createVideoStoreMember", method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void createVideoStoreMember(@RequestBody VideoStoreMember videoStoreMember) {
 		videoStoreMemberManager.storeVideoStoreMember(videoStoreMember);
 	}
 
 	@RequestMapping(value = "/movieListing/deleteVideoStoreMember/{videoStoreMemberID}", method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deleteVideoStoreMembe(@PathVariable("videoStoreMemberID") Long videoStoreMemberID) {
 		videoStoreMemberManager.deleteVideoStoreMember(videoStoreMemberID);
 	}
@@ -62,21 +61,21 @@ public class VideoStoreMemberController {
 	}
 
 	@RequestMapping(value = "movieListing/storeReservation/{reservationid}", method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void reserveMovie(@PathVariable("reservationid") Long reservationID) {
 		Authentication aut = SecurityContextHolder.getContext().getAuthentication();
 		videoStoreMemberManager.reserveMovie(aut.getName(), reservationID, false);
 	}
 
 	@RequestMapping(value = "movieListing/cancelReservation/{reservationid}", method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void cancelMovie(@PathVariable("reservationid") Long reservationID) {
 		Authentication aut = SecurityContextHolder.getContext().getAuthentication();
 		videoStoreMemberManager.cancelReservedMovie(aut.getName(), reservationID);
 	}
 
 	@RequestMapping(value = "movieListing/reservationRented/{reservationid}/memberid/{memeberid}", method = RequestMethod.POST)
-	@ResponseStatus(HttpStatus.OK)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void movieRented(@PathVariable("reservationid") Long reservationID, @PathVariable("memeberid") Long memberid) {
 		VideoStoreMember vsm = videoStoreMemberManager.getVideoStoreMemberByID(memberid);
 		videoStoreMemberManager.rentedMovie(vsm, reservationID);
