@@ -30,7 +30,7 @@ public class MovieManagerImpl implements MovieManager {
 	@PostConstruct
 	void init() {
 		LOG.info("MovieManagerImpl Has been Created");
-	}
+	} 
 	
 	@PreDestroy
 	void destroy() {
