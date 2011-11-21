@@ -17,7 +17,7 @@ import com.cit.eugene.model.Movie;
 import com.cit.eugene.model.MovieReservation;
 import com.cit.eugene.model.VideoStoreMember;
 
-@ContextConfiguration("test-context.xml")
+@ContextConfiguration("file:src/test/resources/test-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class JpaMovieReservationDAOTest {

@@ -10,8 +10,8 @@
 
 	<!-- Creates an in-memory database -->
 	<jdbc:embedded-database id="dataSource">
-		<jdbc:script location="classpath:com/cit/testdb/schema.sql" />
-		<jdbc:script location="classpath:com/cit/testdb/test-setup-data.sql" />
+		<jdbc:script location="classpath:schema.sql" />
+		<jdbc:script location="classpath:test-setup-data.sql" />
 	</jdbc:embedded-database>
 
 

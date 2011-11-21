@@ -23,7 +23,7 @@ import com.cit.eugene.model.Authorities;
 import com.cit.eugene.model.User;
 import com.cit.eugene.model.VideoStoreMember;
 
-@ContextConfiguration("test-context.xml")
+@ContextConfiguration("file:src/test/resources/test-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class JpaVideoStoreMemberDAOTest {
 

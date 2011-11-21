@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.cit.eugene.model.Movie;
 
-@ContextConfiguration("test-context.xml")
+@ContextConfiguration("file:src/test/resources/test-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
 public class JpaMovieDAOTest {

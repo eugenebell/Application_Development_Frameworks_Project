@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.cit.eugene.model.Genre;
 
-@ContextConfiguration("test-context.xml")
+@ContextConfiguration("file:src/test/resources/test-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
 public class JpaGenreDAOTest {
 	
