@@ -15,6 +15,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.cit.eugene.model.Account;
 import com.cit.eugene.model.Movie;
 import com.cit.eugene.model.MovieReservation;
 import com.cit.eugene.model.User;
@@ -54,6 +55,10 @@ public class VideoStoreMemberManagerImplTest {
 		m.setStudioDisplay("studioDisplay");
 		m.setPosterFileName("posterFileName");
 		m.setYear(1999);
+		Account a = new Account();
+		a.setTotal(1.00);
+		a.setAccountID(3l);
+		vsm.setAccount(a);
 		vsm.setMemebershipNumber("sdhu");
 		vsm.setName("bob");
 		vsm.setLocation("location");
@@ -175,7 +180,10 @@ public class VideoStoreMemberManagerImplTest {
 		assertEquals("location", expected.getLocation());
 		assertEquals("bob", expected.getName());
 		assertEquals(Long.valueOf(2), expected.getVideoStoreMemberID());
-		assertEquals("sdhu", expected.getMemebershipNumber());
+		assertEquals("sdhu", expected.getMemebershipNumber());		
+		assertNotNull(expected.getAccount());
+		assertEquals(Double.valueOf(1.00), expected.getAccount().getTotal());
+		assertEquals(Long.valueOf(3l), expected.getAccount().getAccountID());
 		verify(videoStoreMemberRepository);
 	}
 

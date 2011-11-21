@@ -40,6 +40,7 @@ public class MovieManagerImplTest {
 		m.setMovieID(1l);
 		m.setActorsDisplay("actorsDisplay");
 		m.setDirectorsDisplay("directorsDisplay");
+		m.setProducersDisplay("Bob Nobody");
 		m.setDisplayRunTime("160");
 		m.setPrice(1.99);
 		m.setRating(2);

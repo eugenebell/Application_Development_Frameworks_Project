@@ -56,6 +56,7 @@ public class JpaMovieDAOTest {
 		assertEquals("Kôji Yakusho, Takayuki Yamada, Yûsuke Iseya", m.getActorsDisplay());
 		assertEquals("Takashi Miike", m.getDirectorsDisplay());
 		assertEquals("", m.getProducersDisplay());
+		assertEquals("141 min", m.getDisplayRunTime());
 		assertEquals("", m.getStudioDisplay());
 		assertEquals(false, m.isRented());
 		assertEquals("3.99", m.getPrice().toString());
