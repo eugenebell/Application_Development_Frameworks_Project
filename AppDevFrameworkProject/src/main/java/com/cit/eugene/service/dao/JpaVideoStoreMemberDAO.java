@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Repository;
 
 import com.cit.eugene.model.VideoStoreMember;
@@ -23,19 +24,24 @@ public class JpaVideoStoreMemberDAO implements VideoStoreMemberDAO {
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
-
+	
+	@Secured("ROLE_ADMIN")
+	@SuppressWarnings("unchecked")
 	public List<VideoStoreMember> getAllVideoStoreMembers() {
 		return entityManager.createQuery(loadAllVideoStoreMembers).getResultList();
 	}
 
+	@Secured({"ROLE_USER", "ROLE_ADMIN"}) 
 	public VideoStoreMember getVideoStoreMemberByID(Long videoStoreMemberID) {
 		return (VideoStoreMember) entityManager.createQuery(loadVideoStoreMembersByID).setParameter("videoStoreMemberID", videoStoreMemberID).getSingleResult();
 	}
 
+	@Secured({"ROLE_USER", "ROLE_ADMIN"}) 
 	public VideoStoreMember storeVideoStoreMember(VideoStoreMember videoStoreMember) {
 		return entityManager.merge(videoStoreMember);
 	}
 
+	@Secured({"ROLE_USER", "ROLE_ADMIN"}) 
 	public VideoStoreMember getVideoStoreMemberByName(String username) {
 		try {
 			VideoStoreMember v = (VideoStoreMember) entityManager.createQuery(loadVideoStoreMembersByName).setParameter("username", username).getSingleResult();
@@ -46,6 +52,7 @@ public class JpaVideoStoreMemberDAO implements VideoStoreMemberDAO {
 		}
 	}
 
+	@Secured("ROLE_ADMIN")
 	public void deleteVideoStoreMember(Long videoStoreMemberID) {
 		VideoStoreMember vsm = entityManager.find(VideoStoreMember.class, videoStoreMemberID);
 		if (vsm != null) {

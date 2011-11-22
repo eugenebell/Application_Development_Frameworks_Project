@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Repository;
 
 import com.cit.eugene.model.Genre;
@@ -21,6 +22,8 @@ public class JpaGenreDAO implements GenreDAO {
 		this.entityManager = entityManager;
 	}
 	
+	@Secured("ROLE_USER")
+	@SuppressWarnings("unchecked")
 	public List<Genre> getAllGenres() {
 		return entityManager.createQuery(loadAllGenres).getResultList();
 	}
