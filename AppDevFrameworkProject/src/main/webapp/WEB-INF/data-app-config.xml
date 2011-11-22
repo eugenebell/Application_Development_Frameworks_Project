@@ -43,7 +43,7 @@
 	</bean>
 
 	<jdbc:initialize-database data-source="dataSource">
-		<jdbc:script location="classpath:com/cit/eugene/testdb/schema.sql" />
-		<jdbc:script location="classpath:com/cit/eugene/testdb/sample-setup-data.sql" />
+		<jdbc:script location="classpath:mysql-schema.sql" />
+		<jdbc:script location="classpath:sample-setup-data.sql" />
 	</jdbc:initialize-database>
 </beans>
