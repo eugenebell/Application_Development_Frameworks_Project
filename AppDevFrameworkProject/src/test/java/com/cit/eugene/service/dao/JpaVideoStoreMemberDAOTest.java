@@ -28,10 +28,10 @@ import com.cit.eugene.model.VideoStoreMember;
 public class JpaVideoStoreMemberDAOTest {
 
 	private User u = null;
-	
+
 	@Autowired
 	private JpaVideoStoreMemberDAO jpaVideoStoreMember;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		u = new User();
@@ -76,7 +76,7 @@ public class JpaVideoStoreMemberDAOTest {
 		assertEquals("location", vsm.getLocation());
 		assertEquals("bob", vsm.getName());
 	}
-	
+
 	@Test
 	public void testStoreVideoStoreMember2() {
 		VideoStoreMember vsm = new VideoStoreMember();
@@ -99,6 +99,12 @@ public class JpaVideoStoreMemberDAOTest {
 	}
 
 	@Test
+	public void testGetVideoStoreMemberByNameReturningNull() {
+		VideoStoreMember vsm = jpaVideoStoreMember.getVideoStoreMemberByName("sssss");
+		assertNull(vsm);
+	}
+
+	@Test
 	public void testDeleteVideoStoreMember() {
 		VideoStoreMember vsm = new VideoStoreMember();
 		vsm.setLocation("location");
@@ -111,15 +117,7 @@ public class JpaVideoStoreMemberDAOTest {
 		assertEquals("location", vsm.getLocation());
 		assertEquals("bob", vsm.getName());
 		jpaVideoStoreMember.deleteVideoStoreMember(expected.getVideoStoreMemberID());
-		try {
-			VideoStoreMember expected2 = jpaVideoStoreMember.getVideoStoreMemberByID(expected.getVideoStoreMemberID());
-			assertNotNull(expected2);
-			assertNull(expected2.getVideoStoreMemberID());
-			} catch (NoResultException e) {
-			assertTrue(true);
-			return;
-		}
-		//if we get here we have failed.
-		fail();
+		VideoStoreMember expected2 = jpaVideoStoreMember.getVideoStoreMemberByID(expected.getVideoStoreMemberID());
+		assertNull(expected2);
 	}
 }

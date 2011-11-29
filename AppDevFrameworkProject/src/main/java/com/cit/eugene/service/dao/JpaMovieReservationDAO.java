@@ -24,22 +24,16 @@ public class JpaMovieReservationDAO implements MovieReservationDAO {
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
 	@Secured("ROLE_USER")
 	public MovieReservation storeOrUpdateMovieReservation(MovieReservation movieReservation) {
-		MovieReservation r = null;
-		try {
-			r = entityManager.merge(movieReservation);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return r;
+		return entityManager.merge(movieReservation);
 	}
 
 	@Secured("ROLE_USER")
 	public void deleteMovieReservation(MovieReservation movieReservation) {
-		movieReservation = entityManager.find(MovieReservation.class, movieReservation.getMovieReservationID());
-		movieReservation.setMovie(null);
-		movieReservation.setMemberID(null);
-		if (movieReservation != null) {
-			entityManager.remove(movieReservation);
+		MovieReservation movieRes = entityManager.find(MovieReservation.class, movieReservation.getMovieReservationID());
+		if (movieRes != null) {
+			movieRes.setMovie(null);
+			movieRes.setMemberID(null);
+			entityManager.remove(movieRes);
 		}
 	}
 }

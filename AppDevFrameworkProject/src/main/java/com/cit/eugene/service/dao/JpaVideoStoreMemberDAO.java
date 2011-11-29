@@ -33,7 +33,13 @@ public class JpaVideoStoreMemberDAO implements VideoStoreMemberDAO {
 
 	@Secured({"ROLE_USER", "ROLE_ADMIN"}) 
 	public VideoStoreMember getVideoStoreMemberByID(Long videoStoreMemberID) {
-		return (VideoStoreMember) entityManager.createQuery(loadVideoStoreMembersByID).setParameter("videoStoreMemberID", videoStoreMemberID).getSingleResult();
+		try {
+			VideoStoreMember v = (VideoStoreMember) entityManager.createQuery(loadVideoStoreMembersByID).setParameter("videoStoreMemberID", videoStoreMemberID).getSingleResult();
+			return v;
+		} catch (NoResultException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	@Secured({"ROLE_USER", "ROLE_ADMIN"}) 

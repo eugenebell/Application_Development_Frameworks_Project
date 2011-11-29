@@ -2,6 +2,7 @@ package com.cit.eugene.service.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.util.List;
 
@@ -62,6 +63,12 @@ public class JpaMovieDAOTest {
 		assertEquals("3.99", m.getPrice().toString());
 		assertEquals(2, m.getRating().intValue());
 		assertEquals(3, m.getGenres().size());
+	}
+	
+	@Test
+	public void testGetMovieByIDReturningNull() {
+		Movie m = jpaMovieDAO.getMovieByID(10000l);
+		assertNull(m);
 	}
 
 }
