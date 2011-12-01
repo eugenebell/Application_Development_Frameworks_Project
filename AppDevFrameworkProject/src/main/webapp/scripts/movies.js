@@ -40,7 +40,7 @@ function getMovieInfo(movieid) {
 function cancelReservseMovie(movieid) {
 	$.ajax({
 		url : "movieListing/cancelReservation/" + movieid,
-		type : "POST",
+		type : "PUT",
 		success : function(){
 			getMovieInfo(movieid);
 		  },

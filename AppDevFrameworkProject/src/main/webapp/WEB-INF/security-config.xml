@@ -22,19 +22,12 @@
 		<security:intercept-url pattern="/movies/**" access="IS_AUTHENTICATED_FULLY" />
 		<security:logout/>
 	</security:http>
- <security:authentication-manager>
-	<security:authentication-provider>
-<!--		<security:password-encoder hash="md5" >
-			<security:salt-source system-wide="MySalt"/> 
-		</security:password-encoder>-->
-		<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select USERNAME, PASSWORD, ENABLED from USERS where USERNAME = ?" authorities-by-username-query="select USERNAME, AUTHORITY from AUTHORITIES where USERNAME = ?"/>
-	</security:authentication-provider>
-</security:authentication-manager>
+	 <security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select USERNAME, PASSWORD, ENABLED from USERS where USERNAME = ?" authorities-by-username-query="select USERNAME, AUTHORITY from AUTHORITIES where USERNAME = ?"/>
+		</security:authentication-provider>
+	</security:authentication-manager>
 	<security:global-method-security secured-annotations="enabled">
 		<security:protect-pointcut expression="execution(* com.cit.eugene..*ManagerImpl.*(..))" access="ROLE_USER,ROLE_ADMIN" />
 	</security:global-method-security>
-
-<!--  <bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="mySalt">
-		<property name="userPropertyToUse" value="username"/>
-	</bean>-->	
 </beans>

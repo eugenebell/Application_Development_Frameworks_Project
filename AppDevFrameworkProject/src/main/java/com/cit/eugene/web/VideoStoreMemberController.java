@@ -67,7 +67,7 @@ public class VideoStoreMemberController {
 		videoStoreMemberManager.reserveMovie(aut.getName(), reservationID, false);
 	}
 
-	@RequestMapping(value = "movieListing/cancelReservation/{reservationid}", method = RequestMethod.POST)
+	@RequestMapping(value = "movieListing/cancelReservation/{reservationid}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void cancelMovie(@PathVariable("reservationid") Long reservationID) {
 		Authentication aut = SecurityContextHolder.getContext().getAuthentication();
