@@ -20,7 +20,6 @@ public class JpaMovieDAO implements MovieDAO {
 
 	private static final String loadAllMovies = "from Movie";
 	private static final String loadMoviebyID = "from Movie m where m.movieID = :movieID";
-//	private static final String loadMoviesByGenreID = "select m from Movie m join m.genres g where g.genreID = :genreID";
 	private static final String loadMoviesByGenreID = "from Genre g where g.genreID = :genreID";
 
 	@PersistenceContext
