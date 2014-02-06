@@ -1,14 +1,17 @@
-Application_Development_Frameworks_Project
+Movie Storefront Project
 ==========================================
 
-Module Assignment for Application Development Frameworks. http://courses.cit.ie/index.cfm/page/module/moduleId/7496
-
 This web application can be found running at this URL:
-http://movies.cloudfoundry.com/
+http://movies.cfapps.io/
 
-This application was developed for the MSc Cloud Computing (http://cloud.cit.ie) [App. Development Frameworks] Project.
+This application was initially developed for the MSc Cloud Computing (http://cloud.cit.ie) [App. Development Frameworks] Project.
+Admin User:
 Username: admin
 Password: admin
+
+Normal User:
+Username: keri
+Password: keri
 
 Initially there is only the admin user. When you log in to admin you well see 2 menu options. The first one allows 
 you to create normal users i.e. ROLE_USER. Use the admin user to create a normal user and then login as that user 
